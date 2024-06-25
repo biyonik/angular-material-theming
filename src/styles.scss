@@ -1,4 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@use '@angular/material' as material;
+
+@include material.core();
+
+//@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+$workshop-primary: material.m2-define-palette(material.$m2-cyan-palette);
+$workshop-accent: material.m2-define-palette(material.$m2-pink-palette);
+
+$workshop-theme: material.m2-define-light-theme((
+  color: (
+    primary: $workshop-primary,
+    accent: $workshop-accent
+  ),
+));
+
+@include material.all-component-themes($workshop-theme);
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
