@@ -7,7 +7,7 @@ import {SharedMaterialModule} from "./shared-material.module";
   standalone: true,
   imports: [RouterOutlet, SharedMaterialModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'angular-material-theming';
